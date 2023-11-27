@@ -99,7 +99,7 @@ void subscriber_add()
 {
     for(unsigned int i = 0; i < SIZE; i++)
     {
-        if(*subscriberBook[i].name == '\0')
+        if(subscriberBook[i].name[0] == '\0')
         {
         scanf("%s %s %s", subscriberBook[i].name, subscriberBook[i].second_name, subscriberBook[i].tel );
         }
@@ -171,7 +171,7 @@ void print_members()
 {
     for(unsigned int i = 0; i < SIZE; i++)
     {
-        if(*subscriberBook[i].name != '\0')
+        if(subscriberBook[i].name[0] != '\0')
         {
             printf("%d",i);
             subscriber_draw(&subscriberBook[i]);
